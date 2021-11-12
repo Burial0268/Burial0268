@@ -10,4 +10,6 @@
 - ✈ My telegram is:[check here](https://t.me/Burial0268)
 - Thanks！！！
 
+![My GitHub stats](https://github-readme-stats.vercel.app/api?username=Burial0268&show_icons=true&theme=radical)
+
 
