@@ -42,8 +42,6 @@ echo $About->getMyPosition();
 echo $About->getFutureGoal();
 ```
 
-<img align="right" src="https://github-readme-stats.vercel.app/api?username=Burial0268&show_icons=true&icon_color=CE1D2D&text_color=718096&bg_color=ffffff&hide_title=true" />
-
 ```php
       ___           ___           ___       ___       ___     
      /\__\         /\  \         /\__\     /\__\     /\  \    
