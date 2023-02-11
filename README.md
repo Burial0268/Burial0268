@@ -4,7 +4,7 @@
 namespace Humans\Burial0268;
 use Humans\Burial0268\Introduction;
 
-class About extends Burial0268{
+class About{
 
     public function __construct()
     {
