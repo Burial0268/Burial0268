@@ -1,7 +1,10 @@
 ```php
 <?php
-
+/**
+ * A student's introduction
+ */
 namespace Humans\Burial0268;
+
 use Humans\Burial0268\Introduction;
 
 class About{
@@ -9,8 +12,8 @@ class About{
     public function __construct()
     {
         $Introduction = new Introduction();
-        $Introduction->BootStrap();
         $this->info = $Introduction->infoList;
+        $Introduction->BootStrap();
     }
 
     public function getCommonInfo(): string
@@ -47,6 +50,9 @@ echo $About->getFutureGoal();
 ```
 
 ```php
+Strating introduction... done
+Initialize the introduction process... done
+
       ___           ___           ___       ___       ___     
      /\__\         /\  \         /\__\     /\__\     /\  \    
     /:/  /        /::\  \       /:/  /    /:/  /    /::\  \   
@@ -69,7 +75,7 @@ My common info: array(3) {
     string(39) "I am a Genshin Impact（天空岛） player, 大佬求带"
 }
 
-My project info : array(3) { 
+My project info: array(3) { 
     ["FoF-Upload-Qcloud"]=>
     string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud" 
     ["Bili_Video"]=> 
