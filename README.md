@@ -18,7 +18,10 @@ class About extends Burial0268{
         return 'My common info: ' . var_dump($this->info->common);
         $Introduction->showMyProfileCard();
     }
-
+    public function getProjectList(): string
+    {
+        return 'My project info: ' . var_dump($this->info->project);
+    }
     public function getMyStack(): string
     {
         return 'Tech stack: ' . var_dump($this->info->techStack);
@@ -37,6 +40,7 @@ class About extends Burial0268{
 
 $About = new About();
 echo $About->getCommonInfo();
+echo $About->getProjectList();
 echo $About->getMyStack();
 echo $About->getMyPosition();
 echo $About->getFutureGoal();
@@ -64,6 +68,15 @@ My common info: array(3) {
     [2]=>
     string(39) "I am a Genshin Impact（天空岛） player, 大佬求带"
 }
+
+My project info : array(3) { 
+    ["FoF-Upload-Qcloud"]=>
+    string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud" 
+    ["Bili_Video"]=> 
+    string(40) "https://github.com/GBCLStudio/Bili_Video" 
+    ["Domain-Resolver-PHP"]=> s
+    tring(49) "https://github.com/GBCLStudio/Domain-Resolver-PHP" 
+} 
 
 Tech stack: array(3) {
     ["Backend"]=>
