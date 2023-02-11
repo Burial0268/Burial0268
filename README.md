@@ -93,7 +93,7 @@ My goal: array(4) {
     [0]=> 
     string(30) "Study another foreign language" 
     [1]=> 
-    string(16) "Stydy JavaScript" 
+    string(16) "Study JavaScript" 
     [2]=> 
     string(43) "Finish the high school entrance examination" 
     [3]=> 
