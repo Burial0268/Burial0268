@@ -1,16 +1,13 @@
 ```php
 <?php
-/**
- * A student's introduction
- */
 namespace Humans\Burial0268;
-
 use Humans\Burial0268\Introduction;
 
-class About{
+class About extends Me{
 
     public function __construct()
     {
+        parent::__construct();
         $Introduction = new Introduction();
         $this->info = $Introduction->infoList;
         $Introduction->BootStrap();
@@ -18,36 +15,29 @@ class About{
 
     public function getCommonInfo(): string
     {
-        return 'My common info: ' . var_dump($this->info->common);
         $Introduction->showMyProfileCard();
+        return 'My common info: ' . var_dump($this->info->common);
     }
     public function getProjectList(): string
-    {
-        return 'My project info: ' . var_dump($this->info->project);
-    }
+    { return 'My project info: ' . var_dump($this->info->project); }
+    
     public function getMyStack(): string
-    {
-        return 'Tech stack: ' . var_dump($this->info->techStack);
-    }
+    { return 'Tech stack: ' . var_dump($this->info->techStack); }
   
     public function getMyPosition(): string
-    {
-        return 'My position: ' . var_dump($this->info->location);
-    }
+    { return 'My position: ' . var_dump($this->info->location); }
     
     public function getFutureGoal(): string
-    {
-        return 'My goal: ' . var_dump($info->ftrGoal);
-    }
+    { return 'My goal: ' . var_dump($info->ftrGoal); }
 }
 
-$About = new About();
-echo $About->getCommonInfo();
-echo $About->getProjectList();
-echo $About->getMyStack();
-echo $About->getMyPosition();
-echo $About->getFutureGoal();
+$About = new Me();
+echo $About->all();
 ```
+
+<a href="https://github.com/GongCx-Github" one-link-mark="yes" target="_blank">
+<img align="right" alt="My Github Stats" src="https://github-readme-stats.vercel.app/api?username=Burial0268&show_icons=true&theme=vue-dark&custom_title=%E6%88%91%E7%9A%84%20Github%20%E7%BB%9F%E8%AE%A1%E5%8D%A1" />
+</a>
 
 ```php
 Strating introduction... done
