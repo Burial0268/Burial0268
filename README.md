@@ -66,8 +66,8 @@ My project info: array(3) {
     string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud" 
     ["Bili_Video"]=> 
     string(40) "https://github.com/GBCLStudio/Bili_Video" 
-    ["Domain-Resolver-PHP"]=> s
-    tring(49) "https://github.com/GBCLStudio/Domain-Resolver-PHP" 
+    ["Domain-Resolver-PHP"]=> 
+    string(49) "https://github.com/GBCLStudio/Domain-Resolver-PHP" 
 } 
 
 Tech stack: array(3) {
