@@ -28,7 +28,7 @@ class About extends Me{
     { return 'My position: ' . var_dump($this->info->location); }
     
     public function getFutureGoal(): string
-    { return 'My goal: ' . var_dump($info->ftrGoal); }
+    { return 'My goal: ' . var_dump($this->info->ftrGoal); }
 }
 
 $About = new Me();
