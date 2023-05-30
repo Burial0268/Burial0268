@@ -3,36 +3,26 @@
 namespace Humans\Burial0268;
 use Humans\Burial0268\Introduction;
 
-class About extends Me{
+class About extends Me
+{
 
-    public function __construct()
+    public function __construct(Introduction $introduction)
     {
-        parent::__construct();
-        $Introduction = new Introduction();
-        $this->info = $Introduction->infoList;
-        $Introduction->BootStrap();
+        parent::__construct(Introduction $introduction);
+        $this->info = $introduction->infoList;
+        $introduction->BootStrap($this);
     }
 
-    public function getCommonInfo(): string
+    public function batchAllInfo(): string
     {
-        $Introduction->showMyProfileCard();
-        return 'My common info: ' . var_dump($this->info->common);
+        return $this->info;
     }
-    public function getProjectList(): string
-    { return 'My project info: ' . var_dump($this->info->project); }
-    
-    public function getMyStack(): string
-    { return 'Tech stack: ' . var_dump($this->info->techStack); }
-  
-    public function getMyPosition(): string
-    { return 'My position: ' . var_dump($this->info->location); }
-    
-    public function getFutureGoal(): string
-    { return 'My goal: ' . var_dump($this->info->ftrGoal); }
+
+    public function toVarDump(mixed $data): string
+    {
+        return var_dump($data);
+    }
 }
-
-$About = new Me();
-echo $About->all();
 ```
 
 ```php
