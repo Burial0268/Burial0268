@@ -8,7 +8,7 @@ class About extends Me
 
     public function __construct(Introduction $introduction)
     {
-        parent::__construct(Introduction $introduction);
+        parent::__construct($introduction);
         $this->info = $introduction->infoList;
         $introduction->BootStrap($this);
     }
