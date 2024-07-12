@@ -46,7 +46,7 @@ My common info: array(3) {
     [0]=>
     string(41) "🔭 I’m currently working on GBCLstudio"
     [1]=>
-    string(39) "🌱 I’m currently learning JavaScript"
+    string(39) "🌱 I’m currently learning TypeScript"
     [2]=>
     string(39) "I am a Genshin Impact（天空岛） player, 大佬求带"
 }
@@ -64,7 +64,7 @@ Tech stack: array(3) {
     ["Backend"]=>
     string(25) "PHP(8.x), Laravel, Flarum"
     ["Frontend"]=>
-    string(18) "Basic Html5 & CSS3"
+    string(17) "Basic React & Vue"
     ["Other"]=>
     string(18) "CDN, VPS, DNS, WAF"
 }
@@ -75,9 +75,9 @@ My goal: array(4) {
     [0]=> 
     string(30) "Study another foreign language" 
     [1]=> 
-    string(16) "Study JavaScript" 
+    string(16) "Study TypeScript" 
     [2]=> 
-    string(43) "Finish the high school entrance examination" 
+    string(39) "Finish the college entrance examination" 
     [3]=> 
     string(29) "To contribute to open source." 
 }
