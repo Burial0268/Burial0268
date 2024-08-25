@@ -2,8 +2,9 @@
 <?php
 namespace Humans\Burial0268;
 use Humans\Burial0268\Introduction;
+use Humans\HumanBeingInterface;
 
-class About extends Me
+class About extends Me implements HumanBeingInterface
 {
 
     public function __construct(Introduction $introduction)
@@ -13,12 +14,12 @@ class About extends Me
         $introduction->BootStrap($this);
     }
 
-    public function batchAllInfo(): string
+    public function batchAllInfo(): array
     {
         return $this->info;
     }
 
-    public function toVarDump(mixed $data): string
+    public function toVarDump(mixed $data): mixed
     {
         return var_dump($data);
     }
@@ -26,8 +27,8 @@ class About extends Me
 ```
 
 ```php
-Strating introduction... done
-Initialize the introduction process... done
+[Log/Boot] Strating introduction... done
+[Log]      Initialize the introduction process... done
 
       ___           ___           ___       ___       ___     
      /\__\         /\  \         /\__\     /\__\     /\  \    
@@ -42,31 +43,31 @@ Initialize the introduction process... done
      \/__/         \/__/         \/__/     \/__/     \/__/    
 
 
-My common info: array(3) {
+My common info: array(4) {
     [0]=>
-    string(41) "🔭 I’m currently working on GBCLstudio"
+    string(37) "🔭 I’m currently working on GBCLstudio"
     [1]=>
-    string(39) "🌱 I’m currently learning TypeScript"
+    string(41) "🌱 A completely stupid high school student"
     [2]=>
-    string(39) "I am a Genshin Impact（天空岛） player, 大佬求带"
+    string(46) "Super Minecraft Fans! Also old things and SBCs"
+    [3]=>
+    string(60)   "EDM lover, rhytem games overdose, btw sub Porter Robinson :D"
 }
 
-My project info: array(3) { 
+My project info: array(2) { 
     ["FoF-Upload-Qcloud"]=>
-    string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud" 
-    ["Bili_Video"]=> 
-    string(40) "https://github.com/GBCLStudio/Bili_Video" 
-    ["Domain-Resolver-PHP"]=> 
-    string(49) "https://github.com/GBCLStudio/Domain-Resolver-PHP" 
+    string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud"
+    ["Flarum-UserIP"]=> 
+    string(36) "https://github.com/GBCLStudio/userip"
 } 
 
 Tech stack: array(3) {
     ["Backend"]=>
-    string(25) "PHP(8.x), Laravel, Flarum"
+    string(31) "PHP(8.x), Laravel, Flarum, Astro"
     ["Frontend"]=>
-    string(17) "Basic React & Vue"
+    string(31) "React, Vue, Vanilla JS, Mithril"
     ["Other"]=>
-    string(18) "CDN, VPS, DNS, WAF"
+    string(24) "CDN, VPS, DNS, WAF, Tauri"
 }
 
 My position: string(14) "China Mainland"
@@ -75,7 +76,7 @@ My goal: array(4) {
     [0]=> 
     string(30) "Study another foreign language" 
     [1]=> 
-    string(16) "Study TypeScript" 
+    string(10) "Study Rust" 
     [2]=> 
     string(39) "Finish the college entrance examination" 
     [3]=> 
