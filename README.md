@@ -63,9 +63,9 @@ My project info: array(2) {
 
 Tech stack: array(3) {
     ["Backend"]=>
-    string(31) "PHP(8.x), Laravel, Flarum, Astro"
+    string(24) "PHP(8.x), Laravel, Flarum"
     ["Frontend"]=>
-    string(31) "React, Vue, Vanilla JS, Mithril"
+    string(38) "React, Vue, Vanilla JS, Mithril, Astro"
     ["Other"]=>
     string(24) "CDN, VPS, DNS, WAF, Tauri"
 }
@@ -74,7 +74,7 @@ My position: string(14) "China Mainland"
 
 My goal: array(4) { 
     [0]=> 
-    string(30) "Study another foreign language" 
+    string(14) "Keep Alive😇"
     [1]=> 
     string(10) "Study Rust" 
     [2]=> 
