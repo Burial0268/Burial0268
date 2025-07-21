@@ -1,35 +1,26 @@
-```php
-<?php
-namespace Humans\Burial0268;
-use Humans\Burial0268\Introduction;
-use Humans\HumanBeingInterface;
+```rust
+// hi, I'm Burial0268 👋
 
-class About extends Me implements HumanBeingInterface
-{
-
-    public function __construct(Introduction $introduction)
-    {
-        parent::__construct($introduction);
-        $this->info = $introduction->infoList;
-        $introduction->BootStrap($this);
+mod humans {
+    pub struct Introduction {
+        pub info_list: Vec<&'static str>,
+        pub projects: std::collections::HashMap<&'static str, &'static str>,
+        pub tech_stack: std::collections::HashMap<&'static str, &'static str>,
+        pub position: &'static str,
+        pub goals: Vec<&'static str>,
     }
 
-    public function batchAllInfo(): array
-    {
-        return $this->info;
+    pub struct About {
+        pub intro: Introduction,
     }
 
-    public function toVarDump(mixed $data): mixed
-    {
-        return var_dump($data);
-    }
-}
-```
+    impl About {
+        pub fn bootstrap(&self) {
+            println!("[Log/Boot] Starting introduction... done");
+            println!("[Log]      Initialize the introduction process... done");
 
-```php
-[Log/Boot] Strating introduction... done
-[Log]      Initialize the introduction process... done
-
+            println!(
+r#"
       ___           ___           ___       ___       ___     
      /\__\         /\  \         /\__\     /\__\     /\  \    
     /:/  /        /::\  \       /:/  /    /:/  /    /::\  \   
@@ -41,46 +32,49 @@ class About extends Me implements HumanBeingInterface
       /:/  /     \:\ \/__/     \:\  \    \:\  \    \:\/:/  /  
      /:/  /       \:\__\        \:\__\    \:\__\    \::/  /   
      \/__/         \/__/         \/__/     \/__/     \/__/    
+"#);
+        }
 
-
-My common info: array(4) {
-    [0]=>
-    string(37) "🔭 I’m currently working on GBCLstudio"
-    [1]=>
-    string(41) "🌱 A completely stupid high school student"
-    [2]=>
-    string(46) "Super Minecraft Fans! Also old things and SBCs"
-    [3]=>
-    string(60)   "EDM lover, rhytem games overdose, btw sub Porter Robinson :D"
+        pub fn dump(&self) {
+            println!("\nMy common info: {:#?}", self.intro.info_list);
+            println!("My project info: {:#?}", self.intro.projects);
+            println!("Tech stack: {:#?}", self.intro.tech_stack);
+            println!("My position: {}", self.intro.position);
+            println!("My goals: {:#?}", self.intro.goals);
+        }
+    }
 }
 
-My project info: array(2) { 
-    ["FoF-Upload-Qcloud"]=>
-    string(47) "https://github.com/GBCLStudio/FoF-Upload-Qcloud"
-    ["Flarum-UserIP"]=> 
-    string(36) "https://github.com/GBCLStudio/userip"
-} 
+fn main() {
+    use std::collections::HashMap;
+    use humans::{About, Introduction};
 
-Tech stack: array(3) {
-    ["Backend"]=>
-    string(24) "PHP(8.x), Laravel, Flarum"
-    ["Frontend"]=>
-    string(38) "React, Vue, Vanilla JS, Mithril, Astro"
-    ["Other"]=>
-    string(24) "CDN, VPS, DNS, WAF, Tauri"
+    let intro = Introduction {
+        info_list: vec![
+            "🔭 Currently working on GBCLstudio",
+            "🌱 A completely stupid student",
+            "🎮 Minecraft fan + retro tech & SBCs lover",
+            "🎵 EDM addicted, rhythm game enjoyer (sub Porter Robinson!)",
+        ],
+        projects: HashMap::from([
+            ("FoF-Upload-Qcloud", "https://github.com/GBCLStudio/FoF-Upload-Qcloud"),
+            ("Flarum-UserIP", "https://github.com/GBCLStudio/userip"),
+        ]),
+        tech_stack: HashMap::from([
+            ("Backend", "PHP(8.x), Laravel, Flarum, TypeScript, Rust"),
+            ("Frontend", "React, Vue, Vanilla JS, Mithril, Astro"),
+            ("Other", "CDN, VPS, DNS, WAF, Tauri"),
+        ]),
+        position: "China Mainland",
+        goals: vec![
+            "Keep Alive😇",
+            "Study Rust",
+            "Finish endless examination",
+            "To contribute to open source.",
+        ],
+    };
+
+    let me = About { intro };
+    me.bootstrap();
+    me.dump();
 }
-
-My position: string(14) "China Mainland"
-
-My goal: array(4) { 
-    [0]=> 
-    string(14) "Keep Alive😇"
-    [1]=> 
-    string(10) "Study Rust" 
-    [2]=> 
-    string(39) "Finish the college entrance examination" 
-    [3]=> 
-    string(29) "To contribute to open source." 
-}
-```
-
